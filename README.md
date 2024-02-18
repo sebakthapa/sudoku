@@ -48,6 +48,6 @@ Contributors are welcomed. Please follow the following guidelines.
 - Fork and clone the project and create new branch with name strucutre [type/specific_area] to start editing.
 - Make the changes, push it and create a pull request.
 - Properly describe your issue and the pull request.
-- Make the small sized commits with proper message in format[ADD/REMOVE/REFACTOR/...: Your_Commit_Message] so it would be easier for moderators.
+- Make the small sized commits with proper message in format[ADD/UPDATE/REMOVE/REFACTOR/...: Your_Commit_Message] so it would be easier for moderators.
 
 ### Thank you!
