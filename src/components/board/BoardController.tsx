@@ -32,8 +32,8 @@ const BoardController = () => {
   ];
   return (
     <div>
-      <div className="controller-header ">
-        <div className="top text-sm flex gap-3 py-2 mb-6">
+      <div className="controller-header w-full">
+        <div className="top text-sm flex gap-2 py-2 mb-6 min-w-full justify-between">
           <span>Mistakes: 1.3</span>
           <span>Score: 301.2</span>
           <div className="flex items-center gap-2">
@@ -45,7 +45,7 @@ const BoardController = () => {
           </div>
         </div>
 
-        <div className="buttons flex gap-4 ">
+        <div className="buttons flex gap-4 justify-between">
           {buttons.map(({ icon, clickAction, label }, idx) => {
             return (
               <ControllerButton

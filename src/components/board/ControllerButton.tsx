@@ -11,7 +11,7 @@ const ControllerButton = ({ icon, clickAction, label }: props) => {
       <button
         onClick={clickAction}
         className={`
-      rounded-full text-gray-300 aspect-square p-3 bg-blue-950 transition border-2 border-blue-950 text-xl
+      rounded-full text-gray-300 aspect-square p-[1.1rem] bg-blue-950 transition border-2 border-blue-950 text-2xl
       hover:border-[rgba(255,255,255,.2)] hover:text-gray-50 active:scale-95
       `}
       >

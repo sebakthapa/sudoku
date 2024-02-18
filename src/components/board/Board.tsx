@@ -32,7 +32,7 @@ const Board = () => {
                 className="box border-2 border-gray-700 grid grid-cols-3 w-fit border-collapse"
               >
                 {box.map((cell: string, cellNumber: number) => {
-                  let bg = "bg-[#101938]";
+                  let bg = "bg-[#131D43]";
                   if (selectedCellLocation) {
                     const [s1, s2] = selectedCellLocation; //selectedCellLocation boxIndex, cellIndex
                     const selectedCellValue = boardData[s1][s2];
@@ -42,7 +42,7 @@ const Board = () => {
                     } else if (
                       includesSubArray(rangeCells, [boxNumber, cellNumber])
                     ) {
-                      bg = "bg-black";
+                      bg = "bg-gray-950";
                     }
                   }
 

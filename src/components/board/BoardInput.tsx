@@ -46,7 +46,7 @@ const BoardInput = ({ value, location, backgroundColor }: props) => {
       <div
         className={`
       ${value && ""}
-      note grid grid-cols-3 text-xs absolute w-full h-full top-0 left-0 p-1 opacity-50 pointer-events-none`}
+      note grid grid-cols-3 text-xs absolute w-full h-full top-0 left-0 p-1 opacity-50 pointer-events-none text-center`}
       >
         {!value && (
           <>
