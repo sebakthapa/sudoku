@@ -7,7 +7,7 @@ interface props {
 
 const Button = ({ children }: props) => {
   return (
-    <button className="border-2 border-transparent hover:border-gray-700 px-2 py-1/2 rounded transition">
+    <button className="border-2 border-transparent hover:border-gray-700 px-2 py-1 rounded transition">
       {children}
     </button>
   );

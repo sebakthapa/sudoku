@@ -22,30 +22,21 @@ const BoardInput = ({ value, location, backgroundColor }: props) => {
   const updateBoardData = (e: React.ChangeEvent<HTMLInputElement>) => {
     const target = e.target as HTMLInputElement;
     const value: string = target.value;
+
     if (/^[0-9]+$/.test(value)) {
       setBoardData({ data: value, location });
       setSelectedCellLocation(location);
     }
-    console.log(e.target.value);
   };
 
   const updateSelectedValue = (e: React.FocusEvent<HTMLInputElement>) => {
     const target = e.target as HTMLInputElement;
     const selectedValue: string = target.value || "";
-    console.log("Selected value from el", selectedValue);
     setSelectedCellLocation(location);
   };
 
-  // const setBackgroundAsPerSelectedValue = (value: string) => {
-  //   if (selectedCellLocation && selectedCellLocation == value) {
-  //     console.log("INSIDE SET BG", selectedCellLocation, value);
-  //     setBackgroundColor("bg-blue-950");
-  //   }
-  // };
-
   useEffect(() => {
-    console.log("selected cell value changed to", selectedCellLocation);
-    // setBackgroundAsPerSelectedValue(selectedCellLocation);
+    // console.log("selected cell value changed to", selectedCellLocation);
   }, [selectedCellLocation]);
 
   return (
@@ -74,7 +65,7 @@ const BoardInput = ({ value, location, backgroundColor }: props) => {
         value={value}
         className={`
       [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none
-      outline-none cursor-pointer caret-transparent 
+      outline-none cursor-pointer caret-transparent
       w-14  text-center  aspect-square text-2xl p- border-[1px] border-gray-700 text-gray-200 hover:bg-gray-700
       focus:bg-sky-800 
  ${backgroundColor}
