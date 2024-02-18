@@ -5,7 +5,7 @@ interface props {
   children: ReactNode;
 }
 
-const Button = ({ children }: props) => {
+const LevelButton = ({ children }: props) => {
   return (
     <button className="border-2 border-transparent hover:border-gray-700 px-2 py-1 rounded transition">
       {children}
@@ -13,4 +13,4 @@ const Button = ({ children }: props) => {
   );
 };
 
-export default Button;
+export default LevelButton;

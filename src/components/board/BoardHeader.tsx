@@ -1,5 +1,5 @@
 import { difficultyLevels } from "@/configs/board.config";
-import Button from "./Button";
+import LevelButton from "./LevelButton";
 
 const BoardHeader = () => {
   return (
@@ -7,7 +7,7 @@ const BoardHeader = () => {
       <p className="opacity-80">Difficulty:</p>
       <div className="board__buttonContainer flex">
         {difficultyLevels.map((lvl, idx) => {
-          return <Button key={idx}>{lvl.name}</Button>;
+          return <LevelButton key={idx}>{lvl.name}</LevelButton>;
         })}
       </div>
     </div>
