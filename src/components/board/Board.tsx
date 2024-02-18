@@ -1,7 +1,7 @@
 "use client";
 import BoardInput from "./BoardInput";
 import BoardHeader from "./BoardHeader";
-import Controller from "./Controller";
+import Controller from "./BoardController";
 import { BoardContext } from "@/contexts/boardContext";
 import { useContext, useEffect, useState } from "react";
 import { boardContextType } from "@/types/boardContext.type";
