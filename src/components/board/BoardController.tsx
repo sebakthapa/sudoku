@@ -34,7 +34,7 @@ const BoardController = () => {
     <div>
       <div className="controller-header w-full">
         <div className="top text-sm flex gap-2 py-2 mb-6 min-w-full justify-between">
-          <span>Mistakes: 1.3</span>
+          <span>Mistakes: 1/3</span>
           <span>Score: 301.2</span>
           <div className="flex items-center gap-2">
             <span>00:24</span>
