@@ -1,10 +1,18 @@
-# SUDOKU
+# SUDOKU --alpha
 
 This is simple yet awesome sudoku app. This is under development and the MVP will be released soon. We are planning to launch it as webapp, PWA and mobile app.
 
+##### --alpha
+
+This is under development phase.
+
 # .
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Preview
+
+Have a preview without installing? click the link below.
+
+[Sudoku website preview](https://sudoku-five-alpha.vercel.app/)
 
 ## Run Locally
 

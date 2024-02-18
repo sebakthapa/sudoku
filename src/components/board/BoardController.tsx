@@ -39,8 +39,7 @@ const BoardController = () => {
           <div className="flex items-center gap-2">
             <span>00:24</span>
             <button className="rounded-full bg-blue-900 p-1 cursor-pointer transition hover:bg-blue-800 active:scale-95">
-              {" "}
-              <BsFillPlayFill />{" "}
+              <BsFillPlayFill />
             </button>
           </div>
         </div>
