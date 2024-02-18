@@ -1,36 +1,53 @@
+# SUDOKU
+
+This is simple yet awesome sudoku app. This is under development and the MVP will be released soon. We are planning to launch it as webapp, PWA and mobile app.
+
+# .
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Run Locally
 
-First, run the development server:
+1. First, clone the project
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   ```bash
+   git clone <project_URL>
+   cd <project_name>
+
+   ```
+
+2. Then, install all the dependencies
+
+   ```bash
+   yarn
+   # or
+   npm install
+   ```
+
+3. Now, run the development server
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   # or
+   bun dev
+   ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Contribute?
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Contributors are welcomed. Please follow the following guidelines.
 
-## Learn More
+#### Contribution Guidlines
 
-To learn more about Next.js, take a look at the following resources:
+- Create a issue describing what you want to work on.
+- Fork and clone the project and create new branch with name strucutre [type/specific_area] to start editing.
+- Make the changes, push it and create a pull request.
+- Properly describe your issue and the pull request.
+- Make the small sized commits with proper message in format[ADD/REMOVE/REFACTOR/...: Your_Commit_Message] so it would be easier for moderators.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Thank you!
