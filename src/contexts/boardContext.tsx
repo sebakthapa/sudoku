@@ -1,18 +1,26 @@
 "use client";
 import { updateBoardContextParams } from "@/types/boardContext.type";
+import { isClient } from "@/utils/checkClient.utils";
 import { ReactNode, createContext, useState } from "react";
 
-const initialData = [
-  ["1", "", "", "", "", "", "", "", ""],
-  ["", "", "", "", "", "", "1", "", ""],
+let initialData: string[][] = [
   ["", "", "", "", "", "", "", "", ""],
-  ["1", "", "", "2", "", "", "", "", ""],
-  ["", "3", "", "", "", "", "", "4", ""],
   ["", "", "", "", "", "", "", "", ""],
-  ["", "", "", "5", "", "", "", "", ""],
-  ["", "", "", "", "", "", "5", "", ""],
-  ["5", "", "", "", "", "", "", "", ""],
+  ["", "", "", "", "", "", "", "", ""],
+  ["", "", "", "", "", "", "", "", ""],
+  ["", "", "", "", "", "", "", "", ""],
+  ["", "", "", "", "", "", "", "", ""],
+  ["", "", "", "", "", "", "", "", ""],
+  ["", "", "", "", "", "", "", "", ""],
+  ["", "", "", "", "", "", "", "", ""],
 ];
+if (isClient) {
+  const boardData = window.localStorage.getItem("boardData");
+  if (boardData) {
+    initialData = JSON.parse(boardData);
+  }
+}
+
 type InitialDataType = typeof initialData;
 
 export const BoardContext = createContext<any>(initialData);
@@ -26,6 +34,9 @@ const BoardContextProvider = ({ children }: { children: ReactNode }) => {
     setBoardData((prev: InitialDataType) => {
       const newData: InitialDataType = [...prev];
       newData[boxIndex][cellIndex] = data;
+
+      isClient &&
+        window.localStorage.setItem("boardData", JSON.stringify(newData));
 
       return newData;
     });

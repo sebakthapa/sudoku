@@ -52,18 +52,22 @@ const BoardInput = ({ value, location, backgroundColor }: props) => {
     <div className="inline-block w-fit relative">
       <div
         className={`
-      ${value?.length > 0 && "hidden"}
+      ${value && ""}
       note grid grid-cols-3 text-xs absolute w-full h-full top-0 left-0 p-1 opacity-50 pointer-events-none`}
       >
-        <span>1</span>
-        <span>2</span>
-        <span>3</span>
-        <span>4</span>
-        <span>5</span>
-        <span>6</span>
-        <span>7</span>
-        <span>8</span>
-        <span>9</span>
+        {!value && (
+          <>
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+            <span>6</span>
+            <span>7</span>
+            <span>8</span>
+            <span>9</span>
+          </>
+        )}
       </div>
       <input
         type="number"
