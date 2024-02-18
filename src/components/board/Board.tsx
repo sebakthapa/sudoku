@@ -16,11 +16,11 @@ const Board = () => {
   const [rangeCells, setRangeCells] = useState<number[][]>([]);
 
   useEffect(() => {
-    setRangeCells(getCellsRange(selectedCellLocation));
+    selectedCellLocation && setRangeCells(getCellsRange(selectedCellLocation));
   }, [selectedCellLocation]);
 
   return (
-    <div className="flex ">
+    <div className="flex gap-10">
       <div className="left">
         <BoardHeader />
 

@@ -29,7 +29,9 @@ const BoardInput = ({ value, location, backgroundColor }: props) => {
     }
   };
 
-  const updateSelectedValue = (e: React.FocusEvent<HTMLInputElement>) => {
+  const updateSelectedCellLocation = (
+    e: React.FocusEvent<HTMLInputElement>,
+  ) => {
     const target = e.target as HTMLInputElement;
     const selectedValue: string = target.value || "";
     setSelectedCellLocation(location);
@@ -70,7 +72,7 @@ const BoardInput = ({ value, location, backgroundColor }: props) => {
       focus:bg-sky-800 
  ${backgroundColor}
       `}
-        onFocus={updateSelectedValue}
+        onFocus={updateSelectedCellLocation}
         onChange={updateBoardData}
       />
     </div>

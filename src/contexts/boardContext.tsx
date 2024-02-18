@@ -1,7 +1,7 @@
 "use client";
 import { updateBoardContextParams } from "@/types/boardContext.type";
 import { isClient } from "@/utils/checkClient.utils";
-import { ReactNode, createContext, useState } from "react";
+import { ReactNode, createContext, useEffect, useState } from "react";
 
 let initialData: string[][] = [
   ["", "", "", "", "", "", "", "", ""],
@@ -27,11 +27,16 @@ export const BoardContext = createContext<any>(initialData);
 
 const BoardContextProvider = ({ children }: { children: ReactNode }) => {
   const [boardData, setBoardData]: any = useState<InitialDataType>(initialData);
-  const [selectedCellLocation, setSelectedCellLocation] = useState<string>("");
+  const [selectedCellLocation, setSelectedCellLocation] = useState<any>(null);
 
   const updateBoardData = ({ data, location }: updateBoardContextParams) => {
-    const [boxIndex, cellIndex] = location;
+    const validLocation = location || selectedCellLocation;
+    if (!validLocation) return;
+    const [boxIndex, cellIndex] = validLocation;
     setBoardData((prev: InitialDataType) => {
+      if (prev[boxIndex][cellIndex]) {
+        return prev;
+      }
       const newData: InitialDataType = [...prev];
       newData[boxIndex][cellIndex] = data;
 
