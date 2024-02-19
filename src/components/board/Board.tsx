@@ -5,8 +5,8 @@ import Controller from "./BoardController";
 import { BoardContext } from "@/contexts/boardContext";
 import { useContext, useEffect, useState } from "react";
 import { boardContextType } from "@/types/boardContext.type";
-import { includesSubArray } from "@/utils/arrayMethods.utils";
-import { getCellsRange } from "@/utils/board.utils";
+import { includesSubArray } from "@/utils/arrayMethods.util";
+import { getCellsRange } from "@/utils/board.util";
 
 const Board = () => {
   const { boardData, selectedCellLocation } = useContext(

@@ -1,6 +1,6 @@
 "use client";
 import { updateBoardContextParams } from "@/types/boardContext.type";
-import { isClient } from "@/utils/checkClient.utils";
+import { isClient } from "@/utils/checkClient.util";
 import { ReactNode, createContext, useEffect, useState } from "react";
 
 let initialData: string[][] = [
